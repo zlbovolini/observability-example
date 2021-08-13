@@ -18,3 +18,15 @@ management:
       cors:
         allowed-origins: http://127.0.0.1
         allowed-methods: GET
+
+# Jaeger - Habilita ou não
+opentracing:
+  jaeger:
+    enabled: ${JAEGER_ENABLED:true}
+    service-name: ${spring.application.name}
+    # Jaeger - Endereço para enviar os metadados (trace, span, etc)
+    http-sender:
+      url: ${JAEGER_ENDPOINT:http://localhost:14268/api/traces}
+    # Jaeger - Tipo de amostragem (probabilístico) e sua configuração (1 = 100%)
+    probabilistic-sampler:
+      sampling-rate: ${JAEGER_SAMPLER:1}

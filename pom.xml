@@ -27,7 +27,6 @@
 			</dependency>
 
 			<dependency>
-
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
 				<version>${ch.qos.logback.version}</version>
@@ -60,6 +59,12 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
+			<version>3.2.2</version>
 		</dependency>
 
 		<dependency>
