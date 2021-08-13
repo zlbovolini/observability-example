@@ -17,4 +17,4 @@ run-jaeger:
 	docker container start jaeger
 
 stop-jaeger:
-	docker container start jaeger
+	docker container stop jaeger
