@@ -7,7 +7,13 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*" # info,health,prometheus
+    prometheus:
+      enabled: true
+  metrics:
+    tags:
+      aplicacao: ${NOME_DA_APLICACAO:Serviço de exemplo de health check}
+      ambiente: ${AMBIENTE:desenvolvimento}
 # CORS
       cors:
         allowed-origins: http://127.0.0.1
