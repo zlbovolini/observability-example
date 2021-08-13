@@ -1,0 +1,14 @@
+# by default, only the health status is exposed over an unauthenticated HTTP connection.
+# exposes all health check endpoints
+management:
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# CORS
+      cors:
+        allowed-origins: http://127.0.0.1
+        allowed-methods: GET
