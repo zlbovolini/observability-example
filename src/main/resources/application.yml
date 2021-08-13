@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: Observability Example
 # by default, only the health status is exposed over an unauthenticated HTTP connection.
 # exposes all health check endpoints
 management:
